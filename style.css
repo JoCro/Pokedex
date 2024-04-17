@@ -1,0 +1,407 @@
+
+body {
+
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000093;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#pokedex {
+
+    display: flex;
+    min-height: 30vh;
+    height: 50vh;
+    
+    color: white;
+    width: 100%;
+    max-width: 1400px;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 7px;
+    
+}
+
+.Picture{
+
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.info-container{
+    background-color: white;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+   
+    height: 30vh;
+    margin-top: -50px;
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.detailView{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    
+    position: fixed;
+    top: 0vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    
+    z-index: 6;
+    
+   
+}
+
+.logo{
+
+    width: 83px;
+    height: 83px;
+}
+
+.types{
+
+    width: 70px;
+    height: 40px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    align-items: center;
+    border-radius: 10px;
+    text-transform: capitalize;
+    margin: 5px;
+    
+}
+
+.nameDiv{
+    display: flex;
+}
+
+
+
+.canvas-div{
+
+    width: 100% !important;
+    height: 100% !important;
+    display: flex;
+    justify-content: center;
+}
+
+.hidden{
+
+    display: none;
+}
+
+.pokemon-gallery{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1960px !important;
+    width: 100%;
+    
+    
+}
+
+.single-pokemon{
+
+    width: 300px;
+    height: 300px;
+    background-color: #ae1818;
+    margin: 20px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-transform: capitalize;
+    color: rgb(229, 223, 223);
+    transition: transform .2s;
+}
+
+.single-pokemon:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.single-pokemon img{
+
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    
+}
+
+
+
+.normal{
+    background-color: gray;
+}
+
+.fire{
+    background-color: #FB6C6C;
+}
+
+.water{
+    background-color: #4395e8;
+}
+
+.grass{
+    background-color: rgb(77, 211, 117);
+}
+
+.flying{
+
+    background-color: rgb(170, 219, 244);
+}
+
+.fighting{
+    background-color: #740804;
+}
+
+.poison{
+    background-color: rgb(0, 94, 0);
+}
+
+.electric{
+    background-color: rgb(199, 199, 55);
+}
+
+.ground{
+
+    background-color: rgb(107, 71, 27);
+}
+
+.rock{
+
+    background-color: rgb(166, 166, 166);
+}
+
+.psychic{
+    background-color: purple;
+}
+
+.ice{
+    background-color: rgb(80, 174, 179);
+}
+
+.bug{
+    background-color: #4a1f03;
+}
+
+.ghost{
+
+    background-color: rgba(186, 220, 243, 0.607);
+}
+
+.steel{
+
+    background-color: steelblue;
+}
+
+.dragon{
+
+    background-color: rgb(147, 44, 3);
+}
+
+.dark{
+    background-color: rgb(52, 51, 51);
+}
+
+.fairy{
+    background-color: rgb(238, 135, 152);
+}
+
+.type{
+    width: 80px;
+    height: 40px;
+    background-color: rgba(5, 4, 4, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    margin: 5px;
+}
+
+.types-container{
+
+    display: flex;
+}
+
+header{
+
+    background-color: rgb(250, 232, 66);
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.header{
+
+    max-width: 1960px !important;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+    
+}
+
+header img{
+
+    margin-left: 50px;
+}
+
+.header a{
+
+    width: 70px;
+    color: rgb(38, 36, 36);
+    text-decoration: none;
+    font-size: 22px;
+    text-align: center;
+    margin-right: 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.header a:hover{
+
+    color: rgb(255, 255, 255);
+    background-color: rgba(8, 8, 8, 0.3);
+}
+
+.search-div{
+
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.search-div input{
+    width: 300px;
+    height: 40%;
+    border-radius: 15px;
+    border: none;
+    margin: 10px;
+    font-size: 18px;
+}
+
+
+.search-div button{
+
+    height: 40%;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+    background-color: rgb(19, 64, 226);
+   box-shadow: 3px 0px 7px black;
+   width: 110px;
+   color: rgb(241, 225, 45);
+   font-size: 20px;
+}
+
+.search-div button:hover{
+
+   background-color: rgb(72, 134, 241);
+   cursor: pointer;
+}
+
+.cancel-search-btn{
+
+    width: 30px!important;
+    border-radius: 0px 5px 5px 0px !important;
+}
+
+.load-more-btn{
+
+    width: 120px;
+    height: 60px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 4px solid yellow;
+    background-color: #0a0ae9;
+    color: white;
+    font-size: 14px;
+}
+
+.load-more-btn:hover{
+
+    background-color: yellow;
+    border: 2px solid rgb(45, 64, 241);
+    color: black;
+    box-shadow: 2px 0px 7px yellow;
+
+}
+
+.ctrl-btn{
+    margin: 50px;
+    border-radius: 100%;
+    height: 70px;
+    width: 70px;
+    border: 4px solid yellow;
+    background-color: #407eff;
+    color: white;
+    font-size: 20px;
+}
+
+.ctrl-btn:hover{
+    background-color: #6999ff;
+    border: 4px solid rgb(255, 255, 255);
+}
+
+.detail-header{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: center;
+    width: 90%;
+    text-transform: capitalize;
+}
+
+.close-btn{
+
+    margin-left: 100px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+    color: white;
+    font-size: 16px;
+}
+
+.close-btn:hover{
+
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.4);
+}
