@@ -21,13 +21,13 @@ async function loadThemAll(){ //lädt die ersten 20 Pokemon der API
 async function loadMorePokemon(){
     index = amountToLoad +1; //die Variable index wird zu "21", damit das nächste Pokemon, das aus der API geladen wird, das mit der ID 21 ist.
     amountToLoad += 20; //Die Obergrenze für die geladenen Pokemon wird auf 40 erhöht
-
+    
     for (let i = index; i <= amountToLoad; i++) { //folgendes wird 20 mal wiederholt.
         const element = i;
         let url = `https://pokeapi.co/api/v2/pokemon/${element}`
         let response = await fetch(url);
         currentPokemon = await response.json();
-       displayThePokemon(element);
+        displayThePokemon(element);
     }
 }
 
@@ -87,7 +87,7 @@ function renderPokemonInfo(name){ //Diese Funktion soll die Stats des Pokemon la
         
         document.getElementById('types').innerHTML += `<div class="types">${detailPokemon['types'][j]['type']['name']}</div>`;
     }
-
+    
     renderStatsForDetailView(); // Für das aktuelle Pokemon wird hiermit die Stats geladen
     gimmeTheChart();
 }
@@ -127,14 +127,13 @@ function renderStatsForDetailView(){
 function checkNextToLoad(scale, pokemon) {
     let totalPokemon = indexOfSinglePokemonDiv.length;
     
-    if (scale === 'minus') {
-        pokemon = (pokemon > 1) ? pokemon - 1 : totalPokemon;
+    if (scale === 'minus') { //Wenn Scale gleich minus ist
+        pokemon = (pokemon > 1) ? pokemon - 1 : totalPokemon; //wird überprüft, ob die Pokemon-ID größer als 1 ist, falls JA wird die ID um 1 VERRINGERT, falls NEIN wird sie auf die größte ID der geladenen Pokemon gesetzt
     } else {
         pokemon = (pokemon < totalPokemon) ? pokemon + 1 : 1;
     }
     loadPokemon(pokemon);
 }
-
 
 
 function closeDetail(){ //diese funktion, soll die DetailView schließen
