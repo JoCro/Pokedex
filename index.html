@@ -14,25 +14,25 @@
 <body onload="loadThemAll()">
     
     <header><div class="header"><img class="logo" src="./img/pokeball.png" alt="logo"><div class="search-div"><form onsubmit="filterPokemon(); return false" class="search-div"><input id="search-text" type="text" placeholder="Pokemon suchen..." required minlength="3"><button type="submit">Suchen</button><button onclick="resetFilters()" class="cancel-search-btn">X</button></form></div><a href="#">Start</a></div></header>
-<div id="detail-view" class="detailView hidden">
+    <div id="detail-view" class="detailView hidden">
         <div id="left-btn"></div>
         <div>
-        <div id="pokedex">
-            <div class="detail-header"><h1 class="pokemon-name" id="pokemonName">Name</h1><button onclick="closeDetail()" class="close-btn">X</button></div>
-            <div class="nameDiv" id="types"></div>
-            <img class="Picture" id="pokemonPic" src="" alt="pokemon">  
-        </div>
-        
-        <div class="info-container" id="info-container"></div>
-
-        
+            <div id="pokedex">
+                <div class="detail-header"><h1 class="pokemon-name" id="pokemonName">Name</h1><button onclick="closeDetail()" class="close-btn">X</button></div>
+                <div class="nameDiv" id="types"></div>
+                <img class="Picture" id="pokemonPic" src="" alt="pokemon">  
+            </div>
+            
+            <div class="info-container" id="info-container"></div>
+            
+            
         </div>
         <div id="right-btn"></div>
     </div>
-<div class="pokemon-gallery" id="pokemon-gallery"></div>
-<button id="more-btn" class="load-more-btn" onclick="loadMorePokemon()">Load More</button>
-
-
+    <div class="pokemon-gallery" id="pokemon-gallery"></div>
+    <button id="more-btn" class="load-more-btn" onclick="loadMorePokemon()">Load More</button>
+    
+    
     
     
 </body>
