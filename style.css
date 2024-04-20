@@ -311,7 +311,7 @@ header img{
 
 
 .search-div input{
-    width: 300px;
+    width: 400px;
     height: 40%;
     border-radius: 15px;
     border: none;
@@ -322,7 +322,7 @@ header img{
 
 .search-div button{
     
-    height: 40%;
+    height: 100%;
     border: none;
     border-radius: 5px 0px 0px 5px;
     background-color: rgb(19, 64, 226);
@@ -414,14 +414,28 @@ header img{
     justify-content: center;
     align-items: center;
     gap: 20px;
-    font-size: 30px;
+    
     color: rgb(48, 20, 233);
     font-family: 'Shadows Into Light' !important;
     
 }
 
-.home-btn{
 
+.search-btn-div{
+    
+    display: flex;
+    height: 40%;
+}
+
+.logoDisplay p{
+    
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.home-btn{
+    
     width: 90%;
     height: 50px;
     margin-left: 0 !important;
@@ -429,5 +443,139 @@ header img{
 }
 
 
+
+
+
+@media(max-width: 1160px){
+    #left-btn{
+        position: fixed;
+        bottom: 20px;
+        left: 20vw;
+    }
+    #right-btn{
+        
+        position: fixed;
+        bottom: 20px;
+        right: 20vw;
+    }
+    .ctrl-btn{
+        margin: 0;
+    }
+    
+}
+@media(max-width: 1000px){
+    
+    .logoDisplay{
+        gap: 0;
+        flex-direction: column;
+        
+    }
+    
+    .logoDisplay p{
+        margin-left: 10px;
+        font-size: 20px;       
+    }
+    
+    .logo{
+        margin-left: 10px;
+    }
+    
+    .pokecard{
+        
+        width: 90%;
+    }
+    
+}
+
+
+@media(max-width: 850px){
+    
+    
+}
+
+@media(max-width: 770px){
+    
+    .logoDisplay p{
+        
+        display: none;
+    }
+    
+    .header a{
+        
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+        position: absolute;
+        top: 110px;
+        right: 0;
+        background-color: yellow;
+        border-radius: 100px;
+    }
+    
+    .header{
+        justify-content: center;
+    }
+    
+    .home-btn{
+        height: 40px;
+    }
+    
+    .search-div button{
+        width: 70px;
+        font-size: 16px;
+    }
+    
+    
+}
+
+@media(max-width: 540px){
+    
+    .search-div input{
+        width: 200px;
+        font-size: 14px;
+    }
+    
+    .logo{
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media(max-width: 420px){
+    
+    .close-btn{
+        position: fixed;
+        top: 20px;
+        right: 20px;
+    }
+}
+
+@media(max-width: 400px){
+    
+    .logo{
+        
+        display: none;
+    }
+    
+    .search-div{
+        
+        flex-direction: column;
+    }
+    
+    .single-pokemon:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+    
+    
+}
+
+@media(max-width: 358px){
+    
+    .detail-header{
+        
+        width: unset;
+    }
+}
 
 
